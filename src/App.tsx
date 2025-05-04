@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
 import { MdOutlineEmail } from "react-icons/md";
-
-
+import Card from "./components/Card";
 const icons = [
   {
     id: 1,
@@ -25,6 +24,7 @@ const icons = [
 export default function App() {
   return (
     <main className="bg-gray-50 h-full min-h-screen">
+         <Card />
       <section className="mx-auto max-w-4xl w-full font-noto-sans text-gray-800">
         <div className="flex flex-col gap-6">
         <div className="text-4xl font-rammetto-one tracking-wide pt-16 overflow-hidden">
@@ -84,7 +84,6 @@ export default function App() {
               <motion.a
                 href={item.link}
                 target="_blank"
-                rel="noopener noreferrer"
                 variants={{
                   rest: { color: "#1f2937" }, 
                   hover: { color: "#f9fafb" },
@@ -101,11 +100,11 @@ export default function App() {
         </div>
         <div className="text-xl font-rammetto-one tracking-wide pt-14">
             <h1>Work</h1>
-  
+         
           </div>
         <div className="text-xl font-rammetto-one tracking-wide pt-16">
             <h1>Experience</h1>
-  
+
           </div>
       </section>
     </main>
