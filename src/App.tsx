@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import Card from "./components/Card";
+import Surf from "./components/Surf";
 import icons from "./data/icons"
 
 export default function App() {
   return (
     <main className="bg-gray-50 h-full min-h-screen">
-         <Card />
+         <Surf />
       <section className="mx-auto max-w-4xl w-full font-noto-sans text-gray-800">
         <div className="flex flex-col gap-6">
         <div className="text-4xl font-rammetto-one tracking-wide pt-16 overflow-hidden">
