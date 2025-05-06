@@ -3,7 +3,7 @@ import {travelCard} from "../../data/cards"
 
 const TravelDisplay = () => {
     return (
-        <Card card={travelCard[0]}/>
+        <Card card={travelCard[0]} isDisplay={true}/>
     )
 }
 

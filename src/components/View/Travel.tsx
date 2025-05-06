@@ -4,7 +4,7 @@ import {travelCard} from "../../data/cards"
 
 const Travel = () => {
     return (
-        <Card card={travelCard[0]}/>
+        <Card card={travelCard[0]} isDisplay={false}/>
     )
 }
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import cardArray from "../data/cardArray";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const CardList = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
@@ -10,7 +10,7 @@ const CardList = () => {
   };
 
   return (
-    <div className="flex gap-4 mt-6 relative z-10">
+    <div className="flex gap-6 mt-6 relative z-10">
       {cardArray.map((item, index) => {
         const isExpanded = selectedCard === item.id;
 
@@ -29,24 +29,34 @@ const CardList = () => {
               delay: index * 0.3,
             }}
           >
-            {item.id}
-            {<motion.div
-              layout
-              animate={{
-                height:  isExpanded ? "100vh" : "0rem",
-                width: isExpanded ? "100vw" : "0rem",
-                position: isExpanded ? "fixed" : "relative",
-                top: isExpanded ? 0 : "auto",
-                left: isExpanded ? 0 : "auto",
-                zIndex: isExpanded ? 40 : "auto",
-              }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className={`bg-white overflow-auto ${isExpanded ? "" : "hidden"}`}
-            >
-              <item.component /> 
-            
-            </motion.div>
-         }
+            {<item.display />}
+
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div
+                  key="expanded"
+                  layout
+                  initial={{ height: 0, width: 0}}
+                  animate={{
+                    height: "100vh",
+                    width: "100vw",
+                    position: "fixed",
+                    top: 0,
+                    left: 0,
+                    zIndex: 40,
+                  }}
+                  exit={{
+                    height: 0,
+                    width: 0,
+                    transition: { duration: 0.4, ease: "easeInOut" },
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className=" overflow-auto"
+                >
+                  <item.component />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         );
       })}

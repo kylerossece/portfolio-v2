@@ -3,10 +3,16 @@ import { TbExternalLink } from "react-icons/tb";
 import type { CardType } from "../types/portfolioTypes";
 interface CardProps {
     card: CardType;
+    isDisplay: boolean,
   }
 
-const Card = ({card}  : CardProps) => {
+const Card = ({card, isDisplay}  : CardProps) => {
     return (
+        isDisplay ? (
+        <div className={`h-96 w-xs sm:h-96 sm:w-2xs flex justify-center items-center ${card.backgroundColor}`}>
+                 <img src={card.mainIcon} alt="img" className='h-auto w-auto max-w-32 max-h-28'  />
+        </div>
+        ) :(
         <section 
         className={`h-full min-h-screen ${card.backgroundColor}`}>
              <div className="w-7xl mx-auto">
@@ -47,6 +53,7 @@ const Card = ({card}  : CardProps) => {
 
         </div>
         </section>
+        )
        
 
     )
