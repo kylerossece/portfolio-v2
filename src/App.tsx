@@ -1,15 +1,19 @@
 import { motion } from "framer-motion";
-import Surf from "./components/Surf";
 import icons from "./data/icons"
-import Travel from "./components/Travel";
-import MMO from "./components/MMO";
+import CardList from "./components/CardList";
+
+
+
+
 export default function App() {
   return (
-    <main className="bg-gray-50 h-full min-h-screen">
-         <Surf />
-         <Travel />
-         <MMO />
-      <section className="mx-auto max-w-4xl w-full font-noto-sans text-gray-800">
+
+
+
+
+    <main className="bg-gray-50 h-full min-h-screen relative">
+
+      <section className="mx-auto w-4xl font-noto-sans text-gray-800">
         <div className="flex flex-col gap-6">
         <div className="text-4xl font-rammetto-one tracking-wide pt-16 overflow-hidden">
             <motion.h1
@@ -82,9 +86,9 @@ export default function App() {
           ))}
           </ul>
         </div>
-        <div className="text-xl font-rammetto-one tracking-wide pt-14">
+        <div className="text-xl font-rammetto-one tracking-wide pt-14 overflow-hidden">
             <h1>Work</h1>
-         
+            <CardList/>
           </div>
         <div className="text-xl font-rammetto-one tracking-wide pt-16">
             <h1>Experience</h1>

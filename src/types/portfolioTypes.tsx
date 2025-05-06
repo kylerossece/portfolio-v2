@@ -11,6 +11,7 @@ export interface CardType{
     text?:  string | any,
     link?: string,
     backgroundColor?: string,
+    textColor?: string,
     description? : string,
     technologies?: technologiesType[],
 }

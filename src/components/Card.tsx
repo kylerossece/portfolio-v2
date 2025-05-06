@@ -7,8 +7,9 @@ interface CardProps {
 
 const Card = ({card}  : CardProps) => {
     return (
-        <section className={`h-full min-h-screen ${card.backgroundColor}`}>
-             <div className="max-w-7xl mx-auto">
+        <section 
+        className={`h-full min-h-screen ${card.backgroundColor}`}>
+             <div className="w-7xl mx-auto">
                 <div className='grid grid-cols-12 gap-8 py-32'>
                 <div className="col-span-12 md:col-span-6 flex flex-col gap-6 mt-8">
                 <img src={card.mainIcon} alt="S2S" className='h-auto w-auto max-w-24 max-h-20'  />

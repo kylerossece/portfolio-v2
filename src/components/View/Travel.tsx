@@ -1,6 +1,6 @@
 
-import Card from "./Card"
-import {travelCard} from "../data/cards"
+import Card from "../Card"
+import {travelCard} from "../../data/cards"
 
 const Travel = () => {
     return (

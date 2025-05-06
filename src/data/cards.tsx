@@ -13,6 +13,7 @@ import { SiMui } from "react-icons/si";
 
 const jkCard = [
   {
+    id: 1,
     mainIcon: jk2l2,
     text:  (
         <div className='text-lg flex flex-col gap-4 tracking-tight font-noto-sans font-light text-white'>
@@ -49,6 +50,7 @@ const jkCard = [
 const travelCard = [
  
     {
+    id:2,
     mainIcon: travel,
     text:  (
         <div className='text-lg flex flex-col gap-4 tracking-tight font-noto-sans font-light text-white'>
@@ -84,6 +86,7 @@ const travelCard = [
 const gameCard = [
  
   {
+  id: 3,
   mainIcon: console,
   text:  (
       <div className='text-lg flex flex-col gap-4 tracking-tight font-noto-sans font-light text-white'>
