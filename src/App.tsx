@@ -1,11 +1,16 @@
-import { motion } from "framer-motion";
+import { motion, useInView  } from "framer-motion";
 import icons from "./data/icons"
 import List from "./components/List";
-
+import { useRef } from "react";
 
 
 
 export default function App() {
+  const titleRef = useRef(null);
+  const titleInView = useInView(titleRef, { once: false });
+
+  const textRef = useRef(null);
+  const textInView = useInView(textRef, { once: false });
   return (
 
 
@@ -96,8 +101,22 @@ export default function App() {
             className="relative overflow-hidden mb-1">Work</motion.h1>
             <List/>
           </div>
-        <div className="text-xl font-rammetto-one tracking-wide pt-[500px]">
-            <h1>Experience</h1>
+        <div className="text-xl font-rammetto-one tracking-wide pt-[500px] overflow-hidden">
+            <motion.h1 ref={titleRef}
+            className="overflow-hidden"
+            initial={{ y:60}}
+            animate={titleInView ? { y: 0 } : {}}
+            transition={{duration: 0.2, delay: 0.1}}
+            >Experience</motion.h1>
+            <motion.div
+             ref={textRef} 
+             initial={{ opacity: 0 }}  
+             animate={textInView ? { opacity: 1 } : {}}
+             transition={{duration: 0.4, delay: 0.2}}
+
+             className="text-base font-noto-sans mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </motion.div>
 
           </div>
       </div>

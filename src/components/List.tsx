@@ -15,7 +15,7 @@ const List = () => {
   };
 
   return (
-    <div className="flex gap-6 absolute mt-6 z-10 ">
+    <div className="flex gap-10 absolute mt-6 z-10 ">
       {cardArray.map((item, index) => {
        
         return (
@@ -44,7 +44,6 @@ const List = () => {
           >
             {((selectedCard === item.id)) && (
               <motion.div
-                key="expanded"
                 layout
                 initial={{ height: 0, width: 0 }}
                 animate={{
