@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import icons from "./data/icons"
-import CardList from "./components/CardList";
+import List from "./components/List";
 
 
 
@@ -13,35 +13,35 @@ export default function App() {
 
     <main className="bg-gray-50 h-full min-h-screen relative">
 
-      <section className="mx-auto w-4xl font-noto-sans text-gray-800">
-        <div className="flex flex-col gap-6">
+      <div className="px-5 md:px-0 mx-auto w-4xl font-noto-sans text-gray-800">
+        <div className="flex flex-col gap-4">
         <div className="text-4xl font-rammetto-one tracking-wide pt-16 overflow-hidden">
             <motion.h1
-              initial={{ y: 50 }}  
+              initial={{ y: 100 }}  
               animate={{ y: 0 }}    
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4 }}
             >
               Kyle
             </motion.h1>
             <motion.h1
-              initial={{ y: 50 }} 
+              initial={{ y: 100 }} 
               animate={{ y: 0 }}    
-              transition={{ duration: 0.3, delay: 0.2 }}  
+              transition={{ duration: 0.4, delay: 0.25 }}  
             >
               Prestado
             </motion.h1>
           </div>
 
        
-          <motion.div className="text-lg font-bold max-w-sm"
+          <motion.div className="text-md font-bold max-w-md"
                   initial={{ opacity: 0 }}  
                   animate={{ opacity: 1 }}    
                   transition={{ duration: 0.6,delay: 0.4 }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            I'm a frontend developer with a passion for creating beautiful and functional user interfaces. I love to learn new technologies and improve my skills. I'm always looking for new challenges and opportunities to grow as a developer.
           </motion.div>
 
-          <ul className="flex gap-6 text-3xl overflow-hidden">
+          <ul className="flex gap-3 text-3xl overflow-hidden">
           {icons.map((item, index) => (
             <motion.li
               key={item.id}
@@ -86,15 +86,21 @@ export default function App() {
           ))}
           </ul>
         </div>
-        <div className="text-xl font-rammetto-one tracking-wide pt-14 overflow-hidden">
-            <h1>Work</h1>
-            <CardList/>
+        <div
+        
+         className="text-xl font-rammetto-one tracking-wide pt-8 overflow-hidden">
+            <motion.h1 
+                 initial={{ y: 50 }}  
+                 animate={{ y: 0 }}  
+                 transition={{duration: 0.4, delay: 1.0}}
+            className="relative overflow-hidden mb-1">Work</motion.h1>
+            <List/>
           </div>
-        <div className="text-xl font-rammetto-one tracking-wide pt-16">
+        <div className="text-xl font-rammetto-one tracking-wide pt-[500px]">
             <h1>Experience</h1>
 
           </div>
-      </section>
+      </div>
     </main>
   );
 }

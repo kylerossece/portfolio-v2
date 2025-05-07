@@ -6,7 +6,7 @@ const icons = [
   {
     id: 1,
     icon: <FaGithub />,
-    link: "https://github.com/",
+    link: "https://github.com/kylerossece",
   },
   {
     id: 2,

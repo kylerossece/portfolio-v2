@@ -7,4 +7,5 @@
     --font-noto-sans: 'Noto Sans', sans-serif;
     --font-rammetto-one: 'Rammetto One', cursive;
     --color-regal-blue: #243c5a; 
+    --shadow-card-shadow:-28px 31px 22px 0px rgba(0,0,0,0.2);
 }

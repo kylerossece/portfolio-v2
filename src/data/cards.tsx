@@ -60,7 +60,7 @@ const travelCard = [
         </div>
       ),
     link: "https://www.jk2l2.com/",
-    backgroundColor: "bg-slate-500",
+    backgroundColor: "bg-gray-300",
     textColor: "text-white",
     description : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
     technologies: [{
@@ -96,7 +96,7 @@ const gameCard = [
       </div>
     ),
   link: "https://www.jk2l2.com/",
-  backgroundColor: "bg-slate-500",
+  backgroundColor: "bg-gray-500",
   textColor: "text-white",
   description : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
   technologies: [

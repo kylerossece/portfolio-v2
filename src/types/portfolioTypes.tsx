@@ -7,6 +7,7 @@ interface technologiesType {
 
 
 export interface CardType{
+    id: number,
     mainIcon?: string,
     text?:  string | any,
     link?: string,
@@ -14,4 +15,8 @@ export interface CardType{
     textColor?: string,
     description? : string,
     technologies?: technologiesType[],
+}
+
+export interface ViewProps{
+    onClose?: () => void;
 }
