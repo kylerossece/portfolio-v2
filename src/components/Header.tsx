@@ -28,7 +28,7 @@ const Header = () => {
                   animate={{ opacity: 1 }}    
                   transition={{ duration: 0.6,delay: 0.4 }}
           >
-            I'm a frontend developer with a passion for creating beautiful and functional user interfaces. I love to learn new technologies and improve my skills. I'm always looking for new challenges and opportunities to grow as a developer.
+            I'm currently a front-end developer seeking to create user friendly websites as well as help my fellow developers.
           </motion.div>
 
           <ul className="flex gap-3 text-3xl overflow-hidden">
