@@ -19,10 +19,11 @@ const List = () => {
   };
 
   return (
-    <div className="flex gap-10 absolute mt-6 z-10 ">
+    <div  className="flex absolute gap-10 mt-6 z-20">
       {cardArray.map((item, index) => {
        
         return (
+          <>
           <motion.div
             key={item.id}
             layout
@@ -37,10 +38,11 @@ const List = () => {
               delay: index >= 1 ? index * 0.4 : index * 0.2,
             }}
           >
+
             <div className="cursor-pointer">
             {<item.display />}
             </div>
-
+                 </motion.div>
             <AnimatePresence
             onExitComplete={() => {
               setSelectedCard(null);
@@ -64,14 +66,15 @@ const List = () => {
                   transition: { duration: 0.4, ease: "easeInOut" },
                 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="overflow-auto"
+
               >
                 <item.component onClose={handleClose} />
               </motion.div>
             )}
           </AnimatePresence>
 
-          </motion.div>
+     
+          </>
         );
       })}
     </div>

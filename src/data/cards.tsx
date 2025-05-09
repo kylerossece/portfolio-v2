@@ -59,7 +59,7 @@ const travelCard = [
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
         </div>
       ),
-    link: "https://www.jk2l2.com/",
+    link: "https://travel-guide-hcoa.vercel.app/",
     backgroundColor: "bg-gray-300",
     textColor: "text-white",
     description : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
@@ -95,7 +95,7 @@ const gameCard = [
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
       </div>
     ),
-  link: "https://www.jk2l2.com/",
+  link: "https://mmo-daily.vercel.app/",
   backgroundColor: "bg-gray-500",
   textColor: "text-white",
   description : `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
