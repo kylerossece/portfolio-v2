@@ -19,7 +19,7 @@ const Card = ({card, isDisplay, onClose}  : CardProps) => {
         isDisplay ? (
         <motion.div 
       
-        className={`h-[26rem] w-2xs flex justify-center items-center shadow-lg hover:shadow-card-shadow rounded-xs ${card.backgroundColor}`}
+        className={`h-[28rem] w-[22rem] flex justify-center items-center shadow-lg hover:shadow-card-shadow rounded-xs ${card.backgroundColor} overflow-hidden`}
         whileHover={{
             y: -10,        
             transition: {
@@ -34,7 +34,7 @@ const Card = ({card, isDisplay, onClose}  : CardProps) => {
         ) :(
         <motion.section 
 
-        className={`h-full min-h-screen ${card.backgroundColor}`}>
+        className={`h-full min-h-screen ${card.backgroundColor} overflow-hidden`}>
              <div className="w-7xl mx-auto">
                 
                 <div className='grid grid-cols-12 gap-8 py-24'

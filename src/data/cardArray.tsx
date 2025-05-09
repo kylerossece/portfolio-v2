@@ -10,17 +10,20 @@ const cardArray = [
     {
         component: Surf,
         display: SurfDisplay,
+        url: "jk2l2",
         ...jkCard[0]
     },
     {
         component: Travel,
         display: TravelDisplay,
+        url: "travel-guide",
         ...travelCard[0]
         
     },
     {
         component: MMO,
         display: MMODisplay,
+        url: "mmo-daily",
         ...gameCard[0]
     },
 ]

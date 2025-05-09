@@ -2,16 +2,20 @@ import { useState } from "react";
 import cardArray from "../data/cardArray";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 const List = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
+
   
-  const handleOpen = (id: number) => {
+  const handleOpen = (id: number, url: string) => {
     if (selectedCard === id) return; 
     setSelectedCard(id);
+       window.history.pushState({}, "", url);
   };
   
   const handleClose = () => {
     setSelectedCard(null);
+    window.history.pushState({}, "", "/");
   };
 
   return (
@@ -22,7 +26,7 @@ const List = () => {
           <motion.div
             key={item.id}
             layout
-            onClick={() => handleOpen(item.id)}
+            onClick={() => handleOpen(item.id, item.url)}
             className=""
             initial={{ y: 600, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
