@@ -1,7 +1,7 @@
 
 
 import {  Routes, Route } from "react-router-dom";
-import Page from "./page";
+import Page from "./Page";
 import Surf from "./components/View/Surf"
 import Travel from "./components/View/Travel"
 import MMO from "./components/View/MMO"
