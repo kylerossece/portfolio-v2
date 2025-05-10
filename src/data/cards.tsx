@@ -19,7 +19,7 @@ const jkCard = [
         <div className='text-xl flex flex-col gap-5 tracking-tight font-light font-roboto text-white'>
         <p>JK2L2 is the primary distributor of S2S Internet, powered by Converge.</p>
         <p>I’m responsible for developing and adding features to websites under Surf2Sawa. I also designed the user interface for a chatbot and tools for company admins.</p>
-        <p> Hands-on experience working with production APIs and understanding websites developed by my seniors was able to enhance my skills in Vue. Collaborating with back-end developers and the quality assurance team was able to help me gain experience in the development cycle.</p>
+        <p>I was able to get hands-on experience working with production APIs and understand code developed by my seniors. Collaborating with back-end developers and the quality assurance team was able to help me gain experience in the development cycle.</p>
       </div>
 
       ),

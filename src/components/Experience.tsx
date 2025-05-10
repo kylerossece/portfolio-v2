@@ -10,6 +10,10 @@ const Experience = () => {
   
     const textRef = useRef(null);
     const textInView = useInView(textRef, { once: true });
+
+    const redirectTo = () => {
+      window.open("https://www.jk2l2.com/","_blank")
+    }
     
     return (
         
@@ -26,8 +30,8 @@ const Experience = () => {
          animate={textInView ? { opacity: 1 } : {}}
          transition={{duration: 0.4, delay: 0.2}}
 
-         className="text-base font-noto-sans mt-4">
-          <div className="flex gap-4 items-center">
+         className="text-base font-noto-sans mt-4" >
+          <div className="flex gap-4 items-start" onClick={() => redirectTo()}>
             <motion.div
              className="relative flex items-center justify-center w-14 h-14 cursor-pointer"
             initial="rest"
@@ -52,9 +56,12 @@ const Experience = () => {
             <BsPersonWorkspace />
             </motion.div>
             </motion.div>
-            <div>
-              <p className="font-semibold"> JK2L2, 2024-Present</p>
-              <p className="text-sm italic">Junior Frontend Developer</p>
+            <div className="mt-1.5 text-sm hover:underline cursor-pointer" onClick={() => redirectTo()}>
+              <p className="font-semibold"> JK2L2, Pasig</p>
+              <p className=" italic">Junior Frontend Developer, 2024-Present</p>
+              <p className="italic"> Pasig, Metro Manila</p>
+              <p></p>
+    
         </div>
 
           </div>
